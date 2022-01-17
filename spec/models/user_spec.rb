@@ -17,19 +17,12 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of(:last_name) }
     it { is_expected.to validate_presence_of(:username) }
     it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:years_of_experience) }
-    it { is_expected.to validate_presence_of(:is_admin) }
     it { is_expected.to validate_presence_of(:preferred_language) }
-    it { is_expected.to validate_presence_of(:will_pair) }
   end
 
   describe 'Constants' do
     it 'has a PREFERRED_LANGUAGE constant' do
       expect(described_class::PREFERRED_LANGUAGE).not_to be_nil
-    end
-
-    it 'has a YEARS_OF_EXPERIENCE constant' do
-      expect(described_class::YEARS_OF_EXPERIENCE).not_to be_nil
     end
   end
 end

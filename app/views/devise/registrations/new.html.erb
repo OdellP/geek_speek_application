@@ -44,39 +44,18 @@
           </div>
         </div>
 
-        
-        <div class="columns">
-          <div class="column is-one-quarter">
-
-            <div class="field">
-              <div class="control">
-                <%= f.input_field :years_of_experience, require: true, collection: User::YEARS_OF_EXPERIENCE, prompt: "Years of experience" %>
-              </div>
-            </div>
+        <div class="field">
+          <div class="control">
+            <%= f.input_field :preferred_language, require: true, collection: User::PREFERRED_LANGUAGE, prompt: "Preferred Language" %>
           </div>
-          <div class="column is-one-quarter">
-            <div class="field">
-              <div class="control">
-                  <%= f.input_field :preferred_language, require: true, collection: User::PREFERRED_LANGUAGE, prompt: "Preferred Language" %>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <div class="field">
-            <div class="control">
-              <%= f.button :submit, "Sign up", class:"button is-primary is-medium" %>
+        <div class="field">
+          <div class="control">
+            <%= f.button :submit, "Sign up", class:"button is-primary is-medium" %>
             </div>
             <%= render "devise/shared/links" %>
         </div>
-
-        <div class="column is-one-quarter">
-            <div class="field">
-              <div class="control">
-                  <%= f.input :will_pair, required: false, input_html: { class: "checkbox" }, wrapper: false, label: false, prompt: "Will pair" %>
-              </div>
-            </div>
-          </div>
     <% end %>
   <div>
 </div>
