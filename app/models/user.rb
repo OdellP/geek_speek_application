@@ -2,7 +2,6 @@
 
 class User < ApplicationRecord
   PREFERRED_LANGUAGE = %w[Ruby Python Java JavaScript C# C++ HTML CSS Go].freeze
-  YEARS_OF_EXPERIENCE = ['1-2 years', '2-4 years', '4-6 years', '6+ years'].freeze
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -12,6 +11,5 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :username,
             length: { minimum: 2, maximum: 50, too_short: 'Please add more than 1 character.' }
 
-  validates_presence_of :first_name, :last_name, :username, :email
-  validates_presence_of :years_of_experience, :preferred_language, :will_pair
+  validates_presence_of :first_name, :last_name, :username, :email, :preferred_language
 end
